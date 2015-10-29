@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% block content %}
+            {% for race in races %}
+                <div class="post">
+                    <div class="date">
+                        <p>{{ race.race_date }}</p>
+                    </div>
+                    <h1><a href="">{{ race.event_name }}</a></h1>
+                    <p>{{ race.event_details|linebreaks }}</p>
+                </div>
+            {% endfor %}
+{% endblock content %}
